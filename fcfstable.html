@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CPU Scheduler - FCFS</title>
+
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/table.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div class="menu">
+        <div class="heading">
+          <h1>
+          CPU <br />
+          SCHEDULER <br />
+          </h1>
+        </div>
+        <button class="Preemptive" id="premp">Preemptive</button>
+        <ul class="preemp">
+          <ol>
+            <a href="roundrobintable.html" class="RR table">Round Robin</a>
+          </ol>
+        </ul>
+        <button class="Non Preemptive">Non-Preemptive</button>
+        <ul class="Nonp">
+          <ol>
+            <a href="fcfstable.html" class="FCFS table"
+              >First Come First Serve</a
+            >
+          </ol>
+          <ol>
+            <a href="sjftable.html" class="SJF table headsjf" id="SJFTABLE"
+              >Shortest job first</a
+            >
+          </ol>
+        </ul>
+      </div>
+      <div class="warning">
+        Warning!<br /><br />
+        1. If there is no output try to refresh the page or the web.<br />
+        2. If you miss click the calculate button without entering all input needed.<br /> &nbsp;&nbsp;&nbsp;You need to refresh the page or the web again.<br />
+        <br />Steps <br /><br />
+        1. Click add to add more input<br/>
+        2. Click delete if you wanted to cancel your input<br />
+        3. CLick calculate to see the out put and let it do it's magic. 
+      </div>
+
+      
+      <div class="task">
+        <header>
+          <h1>First Come First Serve Scheduling</h1>
+        </header>
+    
+        <table class="tb" id="table">
+          <tr>
+            <th>Process id</th>
+            <th>Arrival Time</th>
+            <th>Burst Time</th>
+          </tr>
+          <tr>
+            <td>
+              <input type="number" min="0" class="process t" />
+            </td>
+            <td>
+              <input type="number" min="0" class="Arrival t" />
+            </td>
+            <td>
+              <input type="number" min="0" class="Burst t" />
+            </td>
+          </tr>
+          <div class="foot">
+            <button class="add btn" id="add">Add process</button>
+            <button class="delete btn" id="delete">Delete process</button>
+            <button class="Calculate btn" id="calculate">Calculate</button>
+            <button class="Refresh btn" id="refreshButton">Refresh Page</button>
+          </div>
+        </table>
+        <table class="optable" id="output">
+          <tr>
+            <th>Process Id</th>
+            <th>Arrival Time</th>
+            <th>Burst Time</th>
+            <th>Waiting Time</th>
+          </tr>
+        </table>
+        <div class="show"></div>
+        <div class="charts"></div>
+        <script src="js/fcfs.js"></script>
+        <script>
+          // Get the button element
+          const refreshButton = document.getElementById('refreshButton');
+        
+          // Add event listener to the button
+          refreshButton.addEventListener('click', function() {
+            // Refresh the page
+            location.reload();
+          });
+        </script>
+        <script
+          src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+          integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+          crossorigin="anonymous"
+        ></script>
+        <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+          integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+          crossorigin="anonymous"
+        ></script>
+        <script
+          src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+          integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+          crossorigin="anonymous"
+        ></script>
+        <script
+          type="text/javascript"
+          src="https://www.gstatic.com/charts/loader.js"
+        ></script>
+      </div>
+    </div>
+  </body>
+</html>

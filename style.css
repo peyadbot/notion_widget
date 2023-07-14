@@ -1,0 +1,69 @@
+body {
+  background-color: #001bff;
+  font-family: 'Inconsolata', monospace;
+  height: 100%;
+  margin: 0;
+}
+.container {
+  display: inline;
+}
+.heading {
+  left: 3%;
+  color: #ffffff;
+}
+.heading h1 {
+  color: white;
+  font-size: 5.5rem;
+  font-weight: 500;
+  margin: 1rem 0;
+}
+header {
+  padding: 1em;
+}
+.warning {
+  color: white;
+  display: inline-block; 
+  padding-left: 10rem;
+}
+.menu {
+  display: inline-block;
+  margin: 1rem;
+}
+.Preemptive,
+.Non {
+  display: block;
+  color: white;
+  padding: 4px;
+  border: 2px solid white;
+  width: 20em;
+  height: 3em;
+  left: 5%;
+  top: 11vh;
+  font-weight: 500;
+  font-size: 22px;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+.preemp,
+.Nonp {
+  color: aliceblue;
+  padding: 0;
+  font-weight: 200;
+  font-size: 23px;
+}
+.table {
+  color: #ffffff;
+}
+
+/* below is for minimum 1280 */
+@media screen and (max-width: 1480px) {
+  .heading {
+    font-size: 44px;
+  }
+  .icon {
+    top: 30vh;
+  }
+}
+
+

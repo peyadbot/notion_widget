@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CPU Scheduler</title>
+
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/table.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div class="menu">
+        <div class="heading">
+          <h1>
+          CPU <br />
+          SCHEDULER <br />
+          </h1>
+        </div>
+        <button class="Preemptive" id="premp">Preemptive</button>
+        <ul class="preemp">
+          <ol>
+            <a href="roundrobintable.html" class="RR table">Round Robin</a>
+          </ol>
+        </ul>
+        <button class="Non Preemptive">Non-Preemptive</button>
+        <ul class="Nonp">
+          <ol>
+            <a href="fcfstable.html" class="FCFS table"
+              >First Come First Serve</a
+            >
+          </ol>
+          <ol>
+            <a href="sjftable.html" class="SJF table headsjf" id="SJFTABLE"
+              >Shortest job first</a
+            >
+          </ol>
+        </ul>
+      </div>
+      <div class="warning">
+        Warning!<br /><br />
+        1. If there is no output try to refresh the page or the web.<br />
+        2. If you miss click the calculate button without entering all input needed.<br /> &nbsp;&nbsp;&nbsp;You need to refresh the page or the web again.<br />
+        <br />Steps <br /><br />
+        1. Click add to add more input<br/>
+        2. Click delete if you wanted to cancel your input<br />
+        3. CLick calculate to see the out put and let it do it's magic. 
+      </div>
+    </div>
+  </body>
+</html>

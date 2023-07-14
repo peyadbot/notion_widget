@@ -1,0 +1,73 @@
+.task {
+  background-color: white;
+  width: max-content;
+}
+.time {
+  height: 2rem;
+  font-size: 1em;
+}
+.tb {
+  display: absolute;
+  position: center;
+  border: hidden;
+  padding: 20px;
+  border-spacing: 19px;
+  font-size: 20px;
+  color: black;
+}
+.t {
+  padding: 15px;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 12rem;
+}
+.foot {
+  margin: 2rem;
+  display: block;
+  color: black;
+  border-spacing: 2px;
+}
+.btn {
+  font-style: inherit;
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin-right: 1em;
+  text-transform: uppercase;
+  color: black;
+  background-color: white;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.optable {
+  visibility: hidden;
+  display: block;
+  color: black;
+  width: 60rem;
+  border-spacing: 15px;
+  font-size: larger;
+  padding-left: 26px;
+}
+.optable td {
+  background-color: rgba(249, 252, 251, 0.938);
+  border: 2px solid black;
+  padding: 6px;
+  width: 11em;
+  color: rgb(29, 27, 25);
+  text-align: center;
+  border-radius: 10px;
+}
+.show {
+  background-color: #93b788;
+  display: block;
+  width: 24rem;
+  height: 100%;
+  font-size: 28px;
+  color: rgb(43, 38, 32);
+  padding: 7px;
+  visibility: hidden;
+}
