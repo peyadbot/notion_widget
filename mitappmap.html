@@ -11,12 +11,12 @@
         }
 
         h1 {
-            text-align: center;
+            text-align: left;
             margin-top: 20px;
         }
 
         #result-container {
-            text-align: center;
+            text-align: left;
             margin-top: 20px;
         }
 
@@ -31,7 +31,7 @@
     </style>
 </head>
 <body>
-    <h1>Location Coordinates Finder</h1>
+    <h1>Location Coordinates</h1>
     
     <div id="result-container">
         <p>Latitude: <span id="latitude">---</span></p>
@@ -61,8 +61,8 @@
                     console.error('Error fetching data:', error);
                 }
             } else {
-                document.getElementById('latitude').textContent = 'No location parameter in the URL';
-                document.getElementById('longitude').textContent = '';
+                document.getElementById('latitude').textContent = 'No location';
+                document.getElementById('longitude').textContent = 'No location';
             }
         }
 
