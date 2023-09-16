@@ -64,6 +64,14 @@
                 document.getElementById('latitude').textContent = 'No location';
                 document.getElementById('longitude').textContent = 'No location';
             }
+            <script>
+                function getCoordinates() {
+                    const latitude = document.getElementById('latitude').textContent;
+                    const longitude = document.getElementById('longitude').textContent;
+                    return { latitude, longitude };
+                }
+            </script>
+
         }
 
         // Call the fetchCoordinates function when the page loads
