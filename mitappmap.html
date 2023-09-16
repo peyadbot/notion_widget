@@ -43,28 +43,11 @@
             const urlParams = new URLSearchParams(window.location.search);
             const locationParam = urlParams.get('location');
             
-            if (locationParam) {
-                try {
+            try {
+                if (locationParam) {
                     const response = await fetch(`https://api.opencagedata.com/geocode/v1/json?q=${encodeURIComponent(locationParam)}&key=0427f878970c4458aad2ca7e74e52bf5`);
                     const data = await response.json();
 
                     if (data.results.length > 0) {
                         const latitude = data.results[0].geometry.lat;
-                        const longitude = data.results[0].geometry.lng;
-                        document.getElementById('latitude').textContent = latitude;
-                        document.getElementById('longitude').textContent = longitude;
-                    } else {
-                        document.getElementById('latitude').textContent = 'Not Found';
-                        document.getElementById('longitude').textContent = 'Not Found';
-                    }
-                } catch (error) {
-                    console.error('Error fetching data:', error);
-                }
-            }
-        }
-
-        // Call the fetchCoordinates function when the page loads
-        window.addEventListener('load', fetchCoordinates);
-    </script>
-</body>
-</html>
+                        const longitude = data
