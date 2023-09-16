@@ -69,7 +69,7 @@
     
     <label for="locationInput">Enter Location:</label>
     <input type="text" id="locationInput" placeholder="e.g., New York">
-    <button onclick="fetchCoordinates()">Get Coordinates</button>
+    <button id="getCoordinatesButton">Get Coordinates</button>
     
     <p>Latitude: <span id="latitude">---</span></p>
     <p>Longitude: <span id="longitude">---</span></p>
@@ -95,6 +95,9 @@
                 console.error('Error fetching data:', error);
             }
         }
+
+        // Add event listener to the "Get Coordinates" button
+        document.getElementById('getCoordinatesButton').addEventListener('click', fetchCoordinates);
 
         // Function to parse URL parameters and set the location input
         function initializeFromURL() {
