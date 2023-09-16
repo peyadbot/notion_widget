@@ -95,6 +95,18 @@
                 console.error('Error fetching data:', error);
             }
         }
+
+        // Function to parse URL parameters and set the location input
+        function initializeFromURL() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const locationParam = urlParams.get('location');
+            if (locationParam) {
+                document.getElementById('locationInput').value = locationParam;
+            }
+        }
+
+        // Call the initializeFromURL function when the page loads
+        window.addEventListener('load', initializeFromURL);
     </script>
 </body>
 </html>
